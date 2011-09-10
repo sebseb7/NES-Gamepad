@@ -5,7 +5,8 @@ MCU = atmega644pa
 F_CPU = 20000000
 
 #avr default:
-FUSE_SETTINGS = -U lfuse:w:0xd6:m -U hfuse:w:0xd9:m -U efuse:w:0xff:m
+FUSE_SETTINGS = -U lfuse:w:0xd6:m -U hfuse:w:0xd9:m -U efuse:w:0xfd:m
+
 
 
 # Output format. (can be srec, ihex, binary)
