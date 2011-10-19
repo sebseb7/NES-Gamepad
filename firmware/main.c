@@ -29,11 +29,14 @@ void checkOff(void);
 void powerOff(void);
 
 #define POWEROFF_PORT PORTC 
-#define POWEROFF_PINN PORTC5
+#define POWEROFF_PINN PORTC6
 #define POWEROFF_DDR DDRC
+//#define POWEROFF_PORT PORTC 
+//#define POWEROFF_PINN PORTC5
+//#define POWEROFF_DDR DDRC
 
-#define USBSENSE_PORT PORTD
-#define USBSENSE_PINN PORTD2
+#define USBSENSE_PORT PORTA
+#define USBSENSE_PINN PORTA4
 
 
 ISR(PCINT0_vect)
@@ -102,8 +105,8 @@ int main (void)
 	KEY_SELECT_PORT |= (1<<KEY_SELECT_PINN);
 
 
-	PORTA |= (1<<PORTA4);//IRQ		PCINT4	/ PCIE0
-	PCMSK0 |= (1<<PCINT4);//IRQ
+	PORTC |= (1<<PORTC7);//IRQ		PCINT4	/ PCIE0
+	PCMSK2 |= (1<<PCINT23);//IRQ
 
 
 	// pullup for usbsense
@@ -167,8 +170,8 @@ int main (void)
 
 
 
-//	PCICR |= (1<<PCIE0)|(1<<PCIE1)|(1<<PCIE2);
-	PCICR |= (1<<PCIE0)|(1<<PCIE1)|(1<<PCIE2)|(1<<PCIE3);
+	PCICR |= (1<<PCIE0)|(1<<PCIE1)|(1<<PCIE2);
+//	PCICR |= (1<<PCIE0)|(1<<PCIE1)|(1<<PCIE2)|(1<<PCIE3);
 	 
 
 	//timer1
@@ -211,7 +214,7 @@ int main (void)
 			memcpy(packet.payload.message.address, my_addr, RADIO_ADDRESS_LENGTH);
 			packet.payload.message.messageid = 55;
 
-            packet.payload.message.messagecontent[0] = 1;
+            packet.payload.message.messagecontent[0] = 2;
 			packet.payload.message.messagecontent[1] = keyState;
 			packet.payload.message.messagecontent[2] = 100;
                                     
