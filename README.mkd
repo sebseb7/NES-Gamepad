@@ -16,11 +16,11 @@ Versions:
 - v5 add Gyro and ACC (planned)
 
 
-![nes controller](/sebseb7/eagle/raw/master/NES/nes_controller.jpg)
+![nes controller](/sebseb7/NES-Gamepad/raw/master/nes_controller.jpg)
 
 This is the v2:
 
-![nes board](/sebseb7/eagle/raw/master/NES/NESv2_bot.jpg)
-![nes board](/sebseb7/eagle/raw/master/NES/NESv2_top.jpg)
-![nes board](/sebseb7/eagle/raw/master/NES/NESv2_sch.jpg)
+![nes board](/sebseb7/NES-Gamepad/raw/master/NESv2_bot.jpg)
+![nes board](/sebseb7/NES-Gamepad/raw/master/NESv2_top.jpg)
+![nes board](/sebseb7/NES-Gamepad/raw/master/NESv2_sch.jpg)
 
